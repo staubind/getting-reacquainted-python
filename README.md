@@ -6,13 +6,13 @@ The purpose of this repository is to hold some basic examples that I'm working o
 
 Obviously the topics below aren't copmrehensive, but should give me a decent base which I can build upon as I explore Python and create web apps and other projects.
 
- [ ] Basic OOP
- [ ] Functional Programming
- [ ] Lambda Functions
- [ ] Async/Await
- [ ] Try/Except/Finally
- [ ] Decorators
- [ ] Basic Data Structures
- [ ] Algorithms
- [ ] Using APIs
- [ ] Environment Variables
+ - [ ] Basic OOP
+ - [ ] Functional Programming
+ - [ ] Lambda Functions
+ - [ ] Async/Await
+ - [ ] Try/Except/Finally
+ - [ ] Decorators
+ - [ ] Basic Data Structures
+ - [ ] Algorithms
+ - [ ] Using APIs
+ - [ ] Environment Variables
