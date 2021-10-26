@@ -7,6 +7,11 @@ The purpose of this repository is to hold some basic examples that I'm working o
 Obviously the topics below aren't comprehensive, but should give me a decent base which I can build upon as I explore Python and create web apps and other projects.
 
  - [ ] basics, including scope
+    - [x] flow
+    - [x] string methods
+    - [x] list methods
+    - [x] dictionary methods
+    - [ ] scope
  - [ ] Basic OOP
  - [ ] Functional Programming
  - [ ] Lambda Functions
