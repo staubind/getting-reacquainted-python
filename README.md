@@ -11,7 +11,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
     - [x] string methods
     - [x] list methods
     - [x] dictionary methods
-    - [ ] scope
+    - [x] scope
  - [ ] Basic OOP
  - [ ] Functional Programming
  - [ ] Lambda Functions
@@ -22,3 +22,4 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
  - [ ] Algorithms
  - [ ] Using APIs
  - [ ] Environment Variables
+ - [ ] unit testing
