@@ -23,3 +23,22 @@
 # nb_year(1500000, 2.5, 10000, 2000000) -> 10
 # Note:
 # Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
+
+
+from math import floor
+
+def nb_year(p0, percent, aug, p):
+    percent = percent/100
+    years = 0
+    while p0 < p:
+        # apply the growht model
+        p0 = int(p0 * (1 + percent)) + aug
+        print(f'p0 is now {p0}')
+        # increment years
+        years += 1
+        #check if it's bigger than p, if so, return it
+        if p0 > p:
+            return years
+    # could be a problem having a while loop like this if we have a decreasing rate, it could run forever
+
+print(nb_year(1500,5,100,5000))
