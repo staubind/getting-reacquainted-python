@@ -17,3 +17,8 @@
 #  4  =>  true
 # 25  =>  true
 # 26  =>  false
+
+from math import sqrt
+
+def is_square(n):    
+    return not sqrt(n) % 1
