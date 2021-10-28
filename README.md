@@ -6,7 +6,7 @@ The purpose of this repository is to hold some basic examples that I'm working o
 
 Obviously the topics below aren't comprehensive, but should give me a decent base which I can build upon as I explore Python and create web apps and other projects.
 
- - [ ] basics, including scope
+ - [x] basics, including scope
     - [x] flow
     - [x] string methods
     - [x] list methods
@@ -18,8 +18,11 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
  - [ ] Async/Await
  - [x] Try/Except/Finally
  - [ ] Decorators
- - [ ] Basic Data Structures
- - [ ] Algorithms
+ - [x] Basic Data Structures
+   - [x] lists - very basics
+   - [x] dictionaries - very basics (could also use more practice to get familiar :) )
+   - [x] sets - very basics how to make one (could use more practice :) )
+ - [x] Algorithms - just basic problems
  - [ ] Using APIs
  - [ ] Environment Variables
  - [ ] unit testing
