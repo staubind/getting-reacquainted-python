@@ -24,4 +24,29 @@ input = [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', '
 input.sort(key=lambda x: x['color'])
 print(input)
 
+# 5. Write a Python program to filter a list of integers using Lambda. Go to the editor
+input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+# get evens
+evens = list(filter(lambda x: x % 2 == 0, input))
+print(evens)
 
+# 6. Write a Python program to square and cube every number in a given list of integers using Lambda. Go to the editor
+input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+output = list(map(lambda x: x**2, input))
+print(output)
+
+# 8. Write a Python program to extract year, month, date and time using Lambda. Go to the editor
+import datetime
+date_time = lambda x: f'{x.year}-{x.month}-{x.day} {x.hour}:{x.minute}:{x.second}'
+print(date_time(datetime.datetime.now()))
+
+# 9. Write a Python program to check whether a given string is number or not using Lambda. Go to the editor
+isNumber = lambda x: x.replace('.','').isdigit()
+print(isNumber('abcde123'))
+print(isNumber('.5')) 
+print(isNumber('5'))
+# had to get some help on the second case. Interesting though! learned about replace and isdigit! awesome.
+
+# 10. Write a Python program to create Fibonacci series upto n using Lambda. Go to the editor
+# ???  apparently this:
+fib_series = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0,1])
