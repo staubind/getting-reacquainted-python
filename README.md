@@ -14,7 +14,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
     - [x] scope
  - [ ] Basic OOP
  - [ ] Functional Programming
- - [ ] Lambda Functions
+ - [x] Lambda Functions
  - [ ] Async/Await
  - [x] Try/Except/Finally
  - [ ] Decorators
