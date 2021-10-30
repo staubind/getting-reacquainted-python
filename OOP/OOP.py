@@ -1,6 +1,11 @@
-class Sample():
-    pass
+class Dog():
+    
+    def __init__(self, breed, name):
+        self.breed = breed
+        self.name = name
 
-x = Sample()
-print(type(x))
+mydog = Dog(breed = 'Schnauzer', name = 'Gussy')
+otherdog = Dog('Bernadoodle', 'Barnaby')
+print(mydog.breed, mydog.name)
+print(otherdog.breed, otherdog.name)
 
