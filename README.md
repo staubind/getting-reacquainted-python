@@ -22,12 +22,12 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
    - [x] dictionaries - very basics (could also use more practice to get familiar :) )
    - [x] sets - very basics how to make one (could use more practice :) )
  - [x] Algorithms - just basic problems
- - [ ] Using APIs
- - [ ] Environment Variables
- - [ ] unit testing
- - [ ] Async/Await
  - [x] arguments
    - [x] keyword arguments
    - [x] positional arguments
    - [x] **args
    - [x] **kwargs
+ - [ ] Using APIs
+ - [ ] Environment Variables
+ - [ ] unit testing
+ - [ ] Async/Await
