@@ -13,7 +13,7 @@ class Deck():
     def __init__(self):
         self.deck = [{'suite': suite, 'rank': rank} for suite in SUITE for rank in RANKS]
 
-    def shuffle_deck(self):
+    def shuffle(self):
         shuffle(self.deck)
 
     def cut_and_deal(self):
@@ -48,25 +48,103 @@ class Player():
     def play_card(self):
         return self.hand.remove()
 
-    def check_card_count(self):
+    def card_count(self):
         return len(self.hand)
+
+
+
+def compare_cards(card1, card2):
+    # compare values
+    # how account for face cards 
+    index1 = RANKS.index(card1['rank'])
+    index2 = RANKS.index(card2['rank'])
+    if index1 == index2:
+        return 'equal'
+    elif index1 > index2:
+        return 'one'
+    else:
+        return 'two'
+
+def check_for_winner(p1, p2):
+    if p1.card_count() == 0:
+        return 'p2'
+    elif p2.card_count() == 0:
+        return 'p1'
+    else:
+        return False
+
+
+def war(p1, p2):
+        # check that each have enough cards(4), if not draw n-1 cards
+        spoils_count = min(p1.card_count() - 1, p1.card_count() - 1, 3)
+        spoils = []
+        for num in range(spoils_count):
+            spoils.append(p1.play_card())
+            spoils.append(p2.play_card())
+        return spoils
 
 # The game
 def play_game():
-    pass
+    print('Welcome to War. Because War doesn\'t actually require any decisions, \n the game will automatically play.')
 
-print('Welcome to War. Because War doesn\'t actually require any decisions, \n the game will automatically play.')
+    # create the deck
+    deck = Deck()
+    deck.shuffle()
+    h1, h2 = deck.cut_and_deal()
+    # create players
+    p1 = Player('computer', Hand(h1))
+    p2 = Player('player', Hand(h2))
+    
+    # play the game
+    winner = False
+    p1_card = p1.play_card()
+    p2_card = p2.play_card()
+    spoils = [p1_card, p2_card]
+    rounds = 0
+    while not winner:
+        rounds += 1
+        print(f'------------ ROUND {rounds} ------------------')
+        comparison = compare_cards(p1_card, p2_card)
+        if comparison == 'equal':
+            if (p1.card_count() == 0):
+                winner = 'p2'
+                break
+            elif(p2.card_count() == 0):
+                winner = 'p1'
+                break
+            spoils.extend(war(p1, p2))
+            # set the new comparison cards
+            print(f'spoils has {len(spoils)} cards')
+            print(f'p1 has {p1.card_count()} cards')
+            print(f'p2 has {p2.card_count()} cards')
+            p1_card = p1.play_card()
+            p2_card = p2.play_card()
+            spoils.extend([p1_card, p2_card])
+            continue
+        elif comparison == 'one':
+            print(f'spoils has {len(spoils)} cards')
+            print(f'p1 has {p1.card_count()} cards')
+            print(f'p2 has {p2.card_count()} cards')
+            p1.hand.add(spoils)
+        else:
+            print(f'spoils has {len(spoils)} cards')
+            print(f'p1 has {p1.card_count()} cards')
+            print(f'p2 has {p2.card_count()} cards')
+            p2.hand.add(spoils)
+        winner = check_for_winner(p1, p2)
+        if not winner:
+            p1_card = p1.play_card()
+            p2_card = p2.play_card()
+            spoils = [p1_card, p2_card]
 
-# create the deck
-deck = Deck()
-deck.shuffle()
-h1, h2 = deck.cut_and_deal()
-# create players
-computer = Player('computer', h1)
-player = Player(input('What is your name, player?', h2))
+    # print out the winner
+    print(f'After {rounds}, ')
+    print(f'{winner} has won!')
+    print(f'{p1.name} had {p1.card_count()} cards')
+    print(f'{p2.name} had {p2.card_count()} cards.')
+    
 
-
-
+play_game()
 
 
 # play the game
