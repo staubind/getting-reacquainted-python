@@ -12,7 +12,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
     - [x] list methods
     - [x] dictionary methods
     - [x] scope
- - [ ] Basic OOP
+ - [x] Basic OOP
  - [ ] Functional Programming
  - [x] Lambda Functions
  - [ ] Async/Await
