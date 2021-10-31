@@ -27,7 +27,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
  - [ ] unit testing
  - [ ] Async/Await
 - [ ] arguments
-   - [ ] keyword arguments
-   - [ ] positional arguments
-   - [ ] **args
-   - [ ] **kwargs
+   - [x] keyword arguments
+   - [x] positional arguments
+   - [x] **args
+   - [x] **kwargs
