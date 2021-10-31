@@ -36,6 +36,8 @@ class Hand():
     def __len__(self):
         return (len(self.hand))
 
+    def __str__(self):
+        return self.hand.__str__()
 class Player():
     '''
     This is the PLayer class, which takes in a name and instanceo fo a Hand class
@@ -79,7 +81,9 @@ def war(p1, p2):
         spoils_count = min(p1.card_count() - 1, p1.card_count() - 1, 3)
         spoils = []
         for num in range(spoils_count):
+            print(f'p1 has {p1.card_count()} cards')
             spoils.append(p1.play_card())
+            print(f'p2 has {p2.card_count()} cards')
             spoils.append(p2.play_card())
         return spoils
 
@@ -106,20 +110,14 @@ def play_game():
         print(f'------------ ROUND {rounds} ------------------')
         comparison = compare_cards(p1_card, p2_card)
         if comparison == 'equal':
-            if (p1.card_count() == 0):
-                winner = 'p2'
-                break
-            elif(p2.card_count() == 0):
-                winner = 'p1'
-                break
             spoils.extend(war(p1, p2))
             # set the new comparison cards
-            print(f'spoils has {len(spoils)} cards')
-            print(f'p1 has {p1.card_count()} cards')
-            print(f'p2 has {p2.card_count()} cards')
-            p1_card = p1.play_card()
-            p2_card = p2.play_card()
-            spoils.extend([p1_card, p2_card])
+            print(f'spoils has {len(spoils)} cards', f'\n\t{spoils}')
+            print(f'p1 has {p1.card_count()} cards', f'\n\t{p1.hand}')
+            print(f'p2 has {p2.card_count()} cards', f'\n\t{p2.hand}')
+            # p1_card = p1.play_card()
+            # p2_card = p2.play_card()
+            # spoils.extend([p1_card, p2_card])
             continue
         elif comparison == 'one':
             print(f'spoils has {len(spoils)} cards')
