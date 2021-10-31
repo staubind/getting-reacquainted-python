@@ -13,11 +13,10 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
     - [x] dictionary methods
     - [x] scope
  - [x] Basic OOP
- - [ ] Functional Programming
+ - [x] Functional Programming
  - [x] Lambda Functions
- - [ ] Async/Await
  - [x] Try/Except/Finally
- - [ ] Decorators
+ - [x] Decorators
  - [x] Basic Data Structures
    - [x] lists - very basics
    - [x] dictionaries - very basics (could also use more practice to get familiar :) )
@@ -26,6 +25,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
  - [ ] Using APIs
  - [ ] Environment Variables
  - [ ] unit testing
+ - [ ] Async/Await
 - [ ] arguments
    - [ ] keyword arguments
    - [ ] positional arguments
