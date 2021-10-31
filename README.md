@@ -26,7 +26,7 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
  - [ ] Environment Variables
  - [ ] unit testing
  - [ ] Async/Await
-- [ ] arguments
+ - [x] arguments
    - [x] keyword arguments
    - [x] positional arguments
    - [x] **args
