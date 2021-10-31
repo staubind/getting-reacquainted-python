@@ -8,7 +8,6 @@ def func():
     print(globals()['s'])
     s = 50
     print(s)
-
 func()
 print(s)
 
