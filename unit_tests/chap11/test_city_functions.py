@@ -14,4 +14,5 @@ class TestCityFormatCases(unittest.TestCase):
         formatted_name = get_formatted_city_name('santiago', 'chile', 5000000)
         self.assertEqual(formatted_name, 'Santiago, Chile - population 5000000')
 
+
 unittest.main()
