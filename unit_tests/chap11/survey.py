@@ -19,3 +19,5 @@ class AnonymousSurvey():
         print("Survey results:")
         for response in self.responses:
             print('- ' + response)
+
+# set up for class based testing
