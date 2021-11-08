@@ -28,5 +28,5 @@ Obviously the topics below aren't comprehensive, but should give me a decent bas
    - [x] **args
    - [x] **kwargs
  - [x] Environment Variables
- - [ ] unit testing
+ - [x] unit testing
  - [ ] Async/Await
